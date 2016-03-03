@@ -10,10 +10,53 @@
 </head>
 <body>
 <body bgcolor="#F5F5F5">
-<h1>User Detail:</h1>
+<div align="center" style="max-width:880px; border:2px solid #ccc;">
+<div style="color:#2B3856">
+<H1>
+<center> <b> <u> Add new user  </u> </b> </center></H1>
+</div>
 	<b>
-		---------------------------------------------------------------------<br>
 
+
+	<br>
+	<center>
+	<form  name="input" action="/addUser.do" method="post">
+
+	<table border="1" width="30%" cellpadding="3">
+    			<tbody>
+    				<tr>
+    					<td>User Name: </td>
+    					<td><input type="text" name="uName"> <br>
+    				</tr>
+    				<tr>
+    					<td> Password:</td>
+    					<td> <input type="text" name="pass"> </td>
+    				</tr>
+		 </tbody>
+		 </table>
+
+		 <input type="submit" value="Add" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #A9A9A9; border: 3pt ridge lightgrey">
+
+
+
+	</form>
+
+	<br>
+
+	</center>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div style="color:#98AFC7">
+---------------------------------------------------------------------<br>
 		<%
 			ArrayList<User> resultList = (ArrayList<User>) request.getAttribute("result");
 			if (resultList != null) {
@@ -26,33 +69,17 @@
  	}
  	}
  %>
-		---------------------------------------------------------------------<br>
+ 	---------------------------------------------------------------------<br>
+ </div>
+
 
 		<form name="input" action="/updateUser.do" method="post">
-        		<input type="submit" value="Show All User">
+
+        		<input type="submit" value="Show All User" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #A9A9A9; border: 3pt ridge lightgrey" >
         	</form>
-	</b>
-	<center> <b> <u> Add new user  </u> </b> </center>
-	<br>
-	<br>
-	<br>
-	<br>
-	<center>
-	<form  name="input" action="/addUser.do" method="post">
-		User Name: <input type="text" name="uName">
-		Password: <input type="text" name="pass">
-		<input type="submit" value="Add">
-
-	</form>
-
-	<br>
-
-	</center>
-
 <br>
 <br>
-<br>
-<br>
+
 <br>
 <br>
 <br>
@@ -74,6 +101,6 @@
  window.location.href = pageURL;
  }
 </script
-
+</div>
 </body>
 </html>

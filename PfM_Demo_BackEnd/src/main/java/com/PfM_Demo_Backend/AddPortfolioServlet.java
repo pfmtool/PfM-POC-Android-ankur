@@ -19,6 +19,10 @@ public class AddPortfolioServlet extends HttpServlet {
             throws IOException, ServletException {
         String portfolioName = req.getParameter("portfolioName");
         String cusip = req.getParameter("cusip");
+        String opendate  = req.getParameter("opendate");
+        String expdate = req.getParameter("expdate");
+        String desc = req.getParameter("desc");
+        String code = req.getParameter("code");
 
 
         if (portfolioName == null || portfolioName.equals("")) {
@@ -28,7 +32,7 @@ public class AddPortfolioServlet extends HttpServlet {
             return;
         }
 
-        Portfolio portfolio = new Portfolio(portfolioName, cusip);
+        Portfolio portfolio = new Portfolio(portfolioName, cusip, code, opendate,expdate, desc );
         boolean ret = PortfolioDatastore.add(portfolio);
         if (ret) {
             req.setAttribute("_retStr", "Add portfolio " + portfolioName + " succ");

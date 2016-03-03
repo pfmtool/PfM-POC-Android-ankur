@@ -17,8 +17,7 @@ import java.util.logging.Logger;
 
 public class PortfolioDatastore {
 
-    private static final Logger mLogger = Logger
-            .getLogger(PortfolioDatastore.class.getName());
+    private static final Logger mLogger = Logger.getLogger(PortfolioDatastore.class.getName());
     private static final DatastoreService mDatastore = DatastoreServiceFactory
             .getDatastoreService();
 
@@ -37,10 +36,13 @@ public class PortfolioDatastore {
         Key parentKey = getKey();
 
 
-        Entity entity = new Entity(Portfolio.PORTFOLIO_ENTITY_NAME, portfolio.portfolioName,
-                parentKey);
+        Entity entity = new Entity(Portfolio.PORTFOLIO_ENTITY_NAME, portfolio.portfolioName, parentKey);
         entity.setProperty(Portfolio.FIELD_NAME_NAME, portfolio.portfolioName);
         entity.setProperty(Portfolio.FIELD_NAME_CUSIP, portfolio.cusip);
+        entity.setProperty(Portfolio.FIELD_NAME_CODE, portfolio.code);
+        entity.setProperty(Portfolio.FIELD_NAME_OPENDATE, portfolio.opendate);
+        entity.setProperty(Portfolio.FIELD_NAME_EXPDATE, portfolio.expdate);
+        entity.setProperty(Portfolio.FIELD_NAME_DESC, portfolio.desc);
 
 
         mDatastore.put(entity);
@@ -54,6 +56,11 @@ public class PortfolioDatastore {
             result = mDatastore.get(KeyFactory.createKey(getKey(),
                     Portfolio.PORTFOLIO_ENTITY_NAME, portfolio.portfolioName));
             result.setProperty(Portfolio.FIELD_NAME_CUSIP, portfolio.cusip);
+            result.setProperty(Portfolio.FIELD_NAME_CODE, portfolio.code);
+            result.setProperty(Portfolio.FIELD_NAME_EXPDATE, portfolio.expdate);
+            result.setProperty(Portfolio.FIELD_NAME_OPENDATE, portfolio.opendate);
+            result.setProperty(Portfolio.FIELD_NAME_DESC, portfolio.desc);
+
 
 
             mDatastore.put(result);
@@ -134,6 +141,13 @@ public class PortfolioDatastore {
 
         return new Portfolio(
                 (String) entity.getProperty(Portfolio.FIELD_NAME_NAME),
-                (String) entity.getProperty(Portfolio.FIELD_NAME_CUSIP));
+                (String) entity.getProperty(Portfolio.FIELD_NAME_CUSIP),
+                (String) entity.getProperty(Portfolio.FIELD_NAME_CODE),
+                (String) entity.getProperty(Portfolio.FIELD_NAME_OPENDATE),
+                (String) entity.getProperty(Portfolio.FIELD_NAME_EXPDATE),
+                (String) entity.getProperty(Portfolio.FIELD_NAME_DESC)
+
+
+        );
     }
 }

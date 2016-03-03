@@ -18,10 +18,13 @@ public class UpdatePortfolioServlet extends HttpServlet {
             throws IOException, ServletException {
         String portfolioName = req.getParameter("portfolioName");
         String cusip = req.getParameter("cusip");
-
+        String opendate  = req.getParameter("opendate");
+        String expdate = req.getParameter("expdate");
+        String desc = req.getParameter("desc");
+        String code = req.getParameter("code");
 
         if (portfolioName != null && !portfolioName.equals("")) {
-            Portfolio portfolio = new Portfolio(portfolioName, cusip);
+            Portfolio portfolio = new Portfolio(portfolioName, cusip, code, opendate,expdate, desc );
             PortfolioDatastore.update(portfolio);
         }
 
