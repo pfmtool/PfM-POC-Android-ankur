@@ -9,6 +9,7 @@
 <title>Query Result</title>
 </head>
 <body>
+<center>
 <body bgcolor="#F5F5F5">
 <div align="center" style="max-width:880px; border:2px solid #ccc;">
 <div style="color:#2B3856">
@@ -102,5 +103,6 @@
  }
 </script
 </div>
+</center>
 </body>
 </html>

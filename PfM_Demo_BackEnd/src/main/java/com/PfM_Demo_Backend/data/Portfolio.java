@@ -26,8 +26,8 @@ public class Portfolio {
         this.portfolioName = pfName;
         this.cusip = cusip;
         this.code = code;
-        this.opendate = opendate;
-        this.expdate = expdate;
+        this.opendate = openDate;
+        this.expdate = expDate;
         this.desc = desc;
     }
 }

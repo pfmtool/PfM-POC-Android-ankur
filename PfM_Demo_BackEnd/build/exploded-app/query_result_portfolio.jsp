@@ -9,10 +9,11 @@
 <title>Query Result</title>
 </head>
 <body>
+<center>
 <body bgcolor="#F5F5F5">
 <div align="center" style="max-width:880px; border:2px solid #ccc;">
 <div style="color:#2B3856">
-<center> <b> <u> Add new portfolio  </u> </b> </center>
+<H1><center> <b> <u> Add new portfolio  </u> </b> </center></H1>
 </div>
 <b>
 
@@ -74,7 +75,7 @@
 				</tr>
 				<tr>
 					<td> Portfolio Desc: </td>
-					<td> <input type="text" name="pfdesc"> </td>
+					<td> <input type="text" name="desc"> </td>
 				</tr>
 
    			</tbody>
@@ -144,5 +145,6 @@
                     </script
 
  </div>
+ </center>
 </body>
 </html>
