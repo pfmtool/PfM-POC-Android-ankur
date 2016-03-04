@@ -62,8 +62,8 @@ public class PortfolioDetailActivity extends Activity {
                             params.put(PORTFOLIOTAG, portfolioString);
                             String response = ServerUtilities.post(SERVER_ADDR + "/openPosition.do", params);
                             JSONObject filedata = new JSONObject(response);
-                            JSONObject jsonObject = new JSONObject();
-                            JSONArray jsonArray = jsonObject.getJSONArray((String) filedata.get(OPENPOSITIONRESPONSE));
+                            JSONArray jsonArray=  filedata.getJSONArray(OPENPOSITIONRESPONSE);
+
 
 
                             if (jsonArray.length()>0) {
