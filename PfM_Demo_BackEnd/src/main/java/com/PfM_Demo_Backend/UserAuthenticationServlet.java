@@ -41,7 +41,7 @@ public class UserAuthenticationServlet  extends HttpServlet {
         JSONObject json = new JSONObject();
 
         json.put(USERTAG, username );
-        UserDatastore.add(user);//just for testing
+
         boolean ret = UserDatastore.authenticateUser(user);
         if (ret) {
             json.put(AUTHERIZETAG, TRUETAG );
