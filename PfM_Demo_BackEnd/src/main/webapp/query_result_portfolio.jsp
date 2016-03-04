@@ -44,15 +44,15 @@
 					<td>
 					 	<select name="opendate">
                                                      <option value="T">T</option>
-                                                     <option value="T+1">T+1</option>
-                                                     <option value="T+2">T+2</option>
-                                                     <option value="T+3">T+2</option>
-                                                     <option value="T+4">T+4</option>
-                                                     <option value="T+5">T+5</option>
-                                                     <option value="T+6">T+6</option>
-                                                     <option value="T+7">T+7</option>
-                                                     <option value="T+8">T+8</option>
-                                                     <option value="T+9">T+9</option>
+                                                     <option value="T-1">T-1</option>
+                                                     <option value="T-2">T-2</option>
+                                                     <option value="T-3">T-2</option>
+                                                     <option value="T-4">T-4</option>
+                                                     <option value="T-5">T-5</option>
+                                                     <option value="T-6">T-6</option>
+                                                     <option value="T-7">T-7</option>
+                                                     <option value="T-8">T-8</option>
+                                                     <option value="T-9">T-9</option>
                         </select>
 					 </td>
 				</tr>

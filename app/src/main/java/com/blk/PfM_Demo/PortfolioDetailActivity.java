@@ -46,7 +46,7 @@ public class PortfolioDetailActivity extends Activity {
                         String uploadState = "";
                         //try {
                            // initialize();
-                        Intent myIntent = new Intent(PortfolioDetailActivity.this, ABC.class);
+                        Intent myIntent = new Intent(PortfolioDetailActivity.this, LoginActivity.class);
                         // myIntent.putExtra("key", value); //Optional parameters
                         PortfolioDetailActivity.this.startActivity(myIntent);
                            /* Map<String, String> params = new HashMap<String, String>();

@@ -16,8 +16,8 @@ public class AddUserServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
-		String name = req.getParameter("uName");
-		String pass = req.getParameter("pass");
+		String name = req.getParameter("uName").trim();
+		String pass = req.getParameter("pass").trim();
 
 
 		if (name == null || name.equals("")) {

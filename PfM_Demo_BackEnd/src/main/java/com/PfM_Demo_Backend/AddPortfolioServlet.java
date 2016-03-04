@@ -17,12 +17,12 @@ public class AddPortfolioServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException, ServletException {
-        String portfolioName = req.getParameter("portfolioName");
-        String cusip = req.getParameter("cusip");
-        String opendate  = req.getParameter("opendate");
-        String expdate = req.getParameter("expdate");
-        String desc = req.getParameter("desc");
-        String code = req.getParameter("code");
+        String portfolioName = req.getParameter("portfolioName").trim();
+        String cusip = req.getParameter("cusip").trim();
+        String opendate  = req.getParameter("opendate").trim();
+        String expdate = req.getParameter("expdate").trim();
+        String desc = req.getParameter("desc").trim();
+        String code = req.getParameter("code").trim();
 
 
         if (portfolioName == null || portfolioName.equals("")) {

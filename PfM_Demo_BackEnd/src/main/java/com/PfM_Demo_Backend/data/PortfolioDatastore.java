@@ -70,6 +70,13 @@ public class PortfolioDatastore {
         return false;
     }
 
+    public static boolean ifPortfolioExist(Portfolio portfolio){
+        if (getPortfolioByName(portfolio.portfolioName, null) != null) {
+            mLogger.log(Level.INFO, "portfolio exists");
+            return true;
+        }
+        return false;
+    }
     public static boolean delete(String name) {
         // you can also use name to get key, then use the key to delete the
         // entity from datastore directly
