@@ -19,5 +19,17 @@
         completions."
     </string>
     <string name="title_activity_login">Log in</string>
-
+    <string name="opendate_prompt">Choose an open date</string>
+    <string-array name="opendate_array">
+        <item>T</item>
+        <item>T-1</item>
+        <item>T-2</item>
+        <item>T-3</item>
+        <item>T-4</item>
+        <item>T-5</item>
+        <item>T-6</item>
+        <item>T-7</item>
+        <item>T-8</item>
+        <item>T-9</item>
+    </string-array>
 </resources>

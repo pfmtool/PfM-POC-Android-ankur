@@ -83,6 +83,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>openPosition</servlet-name>
+        <servlet-class>com.PfM_Demo_Backend.OpenPositionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>openPosition</servlet-name>
+        <url-pattern>/openPosition.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>SystemServiceServlet</servlet-name>
         <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
         <init-param>

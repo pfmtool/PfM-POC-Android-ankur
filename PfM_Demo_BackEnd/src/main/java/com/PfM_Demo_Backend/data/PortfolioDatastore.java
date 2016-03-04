@@ -157,4 +157,30 @@ public class PortfolioDatastore {
 
         );
     }
+
+    public static ArrayList<Portfolio> getListOfPositions(String portfolioname , String openDate){
+        ArrayList<Portfolio> resultList = new ArrayList<Portfolio>();
+        if (portfolioname == null || portfolioname.equals("")) {
+           return resultList;
+        } else {
+            Query query = new Query(Portfolio.PORTFOLIO_ENTITY_NAME);
+            // get every record from datastore, no filter
+            query.setFilter(null);
+            // set query's ancestor to get strong consistency
+            query.setAncestor(getKey());
+
+            PreparedQuery pq = mDatastore.prepare(query);
+
+            for (Entity entity : pq.asIterable()) {
+                Portfolio portfolio = getPortfolioFromEntity(entity);
+                if (portfolio != null) {
+                    if(portfolio.portfolioName.equals(portfolioname) && portfolio.opendate.equals(openDate)){
+                        resultList.add(portfolio);
+                    }
+                    resultList.add(portfolio);
+                }
+            }
+        }
+        return resultList;
+    }
 }
